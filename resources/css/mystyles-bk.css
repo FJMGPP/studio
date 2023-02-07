@@ -1,0 +1,977 @@
+
+
+/*ALL*/
+
+/* *, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}*/
+
+/* VARIABLES LIST *//*NO USAR - USAR APPLY - VER EL EJEMPLO DE .BTN abajo*/
+
+/*:root {
+--my-default-font-color: #e6e6e6
+--my-secondary-font-color: #434343;
+
+--my-default-background-color: #0d0d0d;--my-default-h-font:"Roboto Slab", serif;
+--my-default-b-font:"Roboto", sans-serif;
+
+--my-hover-font-color: #434343;
+--card-hover-bg-color: #1a1a1a;
+}*/
+
+        
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1vw;
+} /*Forma parte del preset, detrás del normalize de arriba*/
+
+html, body {   
+    @apply m-0 p-0 h-full text-neutral-700;   
+    /*font-family: var(--my-default-b-font);
+    background-color: var(--my-default-background-color); height: 100% PARALLAX - Otherwise, remove */
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+       @apply text-neutral-700; /* font-family: var(--my-default-h-font);*/
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+/* WRAPPER*/
+
+.body-wrapper{
+    @apply container h-screen overflow-y-auto overflow-x-hidden bg-cyan-400;
+    perspective: 10px;/*300px ojo corregir escalas*/
+}
+
+   .parallax-group{
+        @apply h-[100vh] relative;
+        transform-style: preserve-3d;
+    }
+
+        .parallax-layer{
+            @apply absolute ; /*flex justify-center items-center; inset: 0;*/
+           
+        }
+
+            .base-layer{
+                transform: translateZ(-300px) scale(2);
+            }
+
+            .mid-layer{
+                transform: translateZ(0px); 
+            }
+
+            .top-layer{
+                transform: translateZ(210px) scale(0.3);
+            }
+
+
+
+    /* PARALAX WRAPPER*/
+
+    /*ONE GUY*/
+        /*.wrapper {
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            perspective: 10px;
+        }
+        apply container flex flex-col}*/
+
+    /*OTHER GUY*/
+
+    /*@mixin align-center {
+        display: flex;
+        justify-content:center;
+        align-items: center;    
+    } @apply flex justify-center items-center;
+
+        parallax-wraper = body-wrapper
+        .parallax-wraper{
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 300px;
+        }      .body-wrapper{@apply container h-screen overflow-y-auto overflow-x-hidden;}
+    
+    
+            intro-screen = intro-section-holder = wellcome-intro
+            .intro-screen{
+                height: 100vh;
+                background-color: tomato;
+                @include align-center;
+            }      @apply h-[100vh] flex justify-center items-center;
+            
+                    .intro-section-holder{@apply h-[100vh] container flex flex-col py-32 px-8 justify-center items-center bg-amber-400;}
+
+                    .intro-section-holder{
+                        @apply container flex flex-col py-32 px-8 justify-center items-center bg-amber-400 -z-40; /// z-[1] fixed w-screen h-screen     justify-between
+                        }
+
+
+            outro-screen = foot-holder = wellcome-foot
+            .outro-screen{
+                height: 100vh;
+                background-color: teal;
+                @include align-center;
+            }     foot-holder @apply h-[100vh] bg-lime-600 items-center;
+
+                    .outro-screen{
+                        height: 100vh;
+                        background-color: teal;
+                        display: flex;
+                        justify-content:center;
+                        align-items: center;
+                    }      @apply h-[100vh] flex justify-centernitems-center bg-lime-600 ;
+
+                    .foot-holder{
+                        @apply container h-[100vh] w-[100vw] min-h-[50%] max-h-[100%] p-8 text-neutral-700 bg-lime-600 z-0;
+                        /*height:80vh;
+                        width: 100vw;
+                        min-height:50%;
+                        max-height:100%;
+                    }
+    
+        parallax-group = parallax-group
+        .parallax-group{
+            height: 100vh;
+            position: relative;
+            transform-style: preserve-3d;
+        }      @apply h-[100vh] relative; transform-style: preserve-3d;
+
+            parallax-layer = parallax-layer
+             {
+                position: absolute;
+                inset: 0;
+                display: flex;
+                justify-content:center;
+                align-items: center;
+            }      .parallax-layer{@apply absolute flex justify-center items-center; inset: 0;}
+
+
+
+                .base-layer{
+                    transform: translateZ(-300px) scale(2); ///scale calculation 1 + ((z transform value * -1) / perspective) 1+((-300) /300) = 2 /// 
+                } 
+
+                .mid-layer{
+                    transform: translateZ(0px); 
+                }
+
+                .top-layer{
+                    transform: translateZ(210px) scale(0.3); ////*scale calculation 1 + ((z transform value * -1) / perspective) 1+((-100) /300) = 0.33  
+                }
+
+        #wellcome-intro{
+            z-index: 0;
+        }
+
+        #group-1{
+            z-index: -1;
+        }
+
+        #group-1 > .base-layer{
+            background-color: crimson;
+        }
+
+        #group-2{
+            z-index: -1;
+        }
+        
+        #group-2 > .mid-layer{
+            background-color:seagreen;
+        }
+
+        #outro{
+            z-index: 0;
+        }
+*/    
+
+
+
+
+
+    /**/    
+
+            
+/*HEATHER*/
+
+.header-holder{
+    @apply container fixed z-50 flex flex-row justify-between bg-amber-400 border-x-0 border-y-2 border-solid border-neutral-900;
+}
+
+    /* LOGO */
+    .logo-holder{
+        @apply container flex flex-col w-fit basis-auto justify-self-start content-center  bg-red-500 ; /*items-stretch*/
+    }
+
+    /*
+    .logo-holder {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; OK
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; OK
+    }
+    */
+    /*.logo {
+    @apply container flex flex-col fixed object-cover object-center   top-1/20 right-auto bottom-auto left-1/20 w-1/20 z-50 mix-blend-difference no-underline ;
+}*/
+
+    /*
+    .logo {
+        @apply fixed top-[5vh] right-auto bottom-auto left-[5vh] w-[5%] flex flex-col no-underline mix-blend-difference;
+
+        position: fixed; OK
+    
+        top: 5vh;  ah
+        right: auto;
+        bottom: auto;
+        left: 5vh;
+
+        z-index: 1000;
+
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; OK
+        width: 5%; OK
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; OK
+        text-decoration: none; OK
+        mix-blend-mode: difference; OK
+
+        */        
+
+    .menu-button-holder{
+        @apply container flex flex-row basis-auto justify-end items-stretch text-4xl bg-amber-400;
+    }
+
+    /*BUTTONS*/
+
+    .hidden-menu-on{
+        @apply justify-self-start bg-purple-500 transition ease-in-out hover:scale-125 hover:bg-sky-700 duration-300;
+    }
+
+    .hidden-menu-off{
+        @apply justify-self-end bg-orange-500 transition ease-in-out hover:scale-125 hover:bg-sky-700 duration-300;
+    }
+
+
+    /*HIDDEN-MENU*/
+
+        .hidden-menu{
+            @apply container w-screen h-screen p-[5vw] bg-neutral-700 text-neutral-200 hidden; /*z-[2000]*/
+
+        }
+            /*display: none;*/
+            /*position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;*/
+
+
+            /*menu-list es lo primero ep
+
+            FM ****** @apply container w-screen h-screen p-[5vw] z-[2000] bg-neutral-900;
+            
+            EP ****** @apply container fixed inset-0 w-screen h-screen hidden p-8 z-50 bg-neutral-900;
+            .menu-list {
+                position: fixed; ok
+                left: 0; ok - inset
+                top: 0; ok - inset
+                right: 0;  ok - inset
+                bottom: 0; ok - inset
+                z-index: 2000; ok z-[2000]
+                display: none; ok 
+                width: 100vw; ok
+                height: 100vh; ok
+                padding: 5vw; pk
+                background-color: #1f1f1f; ok
+            }
+
+            element.style {
+                transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+                display: block;
+            }
+            */
+            
+
+     /*.visible-hidden-menu-link-holder {
+            @apply container flex flex-col;
+        }*/
+                /* ALGO PASA - REVISAR MAS ADELANTE
+    
+                hidden fixed inset-0 transform-gpu translate-x-0 translate-y-0  scale-100 rotate-0 skew-x-0  skew-y-0 block
+
+
+                transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+                display: block;*/
+
+
+            /*.menu-list {
+                position: fixed;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2000;
+                display: none;
+                width: 100vw;
+                height: 100vh;
+                padding: 5vw;
+                background-color: #1f1f1f;
+            }
+            /*
+                menu-list element.style {
+                transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+                display: block;
+                }
+            */
+
+            .hidden-menu-holder{     
+                @apply flex flex-row p-8 gap-x-4 justify-between bg-lime-400; /*container  h-screen max-h-full p-8 justify-between text-inherit flex hidden*/
+            /*.tuft{
+                @apply flex flex-row p-8 gap-x-4 justify-between bg-pink-500;
+            }*/
+                
+                
+                /*
+                height:100vh;
+                min-height:50%; revisa hay que hacerlo en el elementp usando la mitad de la altura y luego full min-h-full
+                max-height:100%;
+                */
+            }
+        
+
+            /*
+            .menu-item-holder {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                height: 100%;  ok
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+
+                grid-auto-columns: 1fr;
+                grid-column-gap: 1rem;
+                grid-row-gap: 1rem;
+                -ms-grid-columns: 1fr minmax(200px,0.75fr);
+                grid-template-columns: 1fr minmax(200px,0.75fr);
+                -ms-grid-rows: auto;
+                grid-template-rows: auto;
+            }
+            */      
+
+            .hidden-menu-nav{
+            @apply container flex h-full flex-col justify-around;   /*container   justify-evenly content-center items-stretch text-9xl hidden*/
+        }
+            /*
+        .nav-link-holder {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+
+            display: flex; ok
+            height: 100%; ok 
+
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+
+            flex-direction: column; ok
+            -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+        }
+        */
+
+                .hidden-menu-nav-link{
+                @apply container text-7xl text-left;
+
+                }
+                /* flex-auto*/
+
+                /*
+            .navlink {
+                -webkit-transition: opacity .9s,.5s;
+                transition: opacity .9s,.5s;
+                font-family: 'Neue Montreal Variable',sans-serif;
+                color: #fff;
+                font-size: 5rem;
+                line-height: 100%;
+            }
+            */
+        
+
+
+            .hidden-menu-contact{
+                @apply container flex flex-col justify-end items-end text-2xl; /*hidden flex-wrap  flex-auto content-center items-stretch*/
+            }
+
+            /*
+            .other-menu-holder {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex; OK
+
+                -webkit-box-pack: end;
+                -webkit-justify-content: flex-end;
+                -ms-flex-pack: end;
+                justify-content: flex-end; OK
+
+                -webkit-box-align: end;
+                -webkit-align-items: flex-end;
+                -ms-flex-align: end;
+                align-items: flex-end; OK
+            }
+            */
+
+                /*
+                .other-items-float {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    width: 100%;
+                    height: 9rem;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -webkit-box-pack: justify;
+                    -webkit-justify-content: space-between;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                }
+                */
+
+
+                /*.other-item {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -webkit-box-align: start;
+                    -webkit-align-items: flex-start;
+                    -ms-flex-align: start;
+                    align-items: flex-start;
+                    color: #fff;
+                    text-decoration: none;
+                }
+                */
+                 
+  
+/*SECTIONS*/
+
+/*TITLES*/
+
+.section-title-holder{
+    @apply container flex flex-col p-8 justify-start items-baseline border-b-4 border-solid border-neutral-900;
+}
+
+    .section-title{
+        @apply text-6xl;
+    }
+
+/*SUBTITLES*/
+
+
+/*SLOGAN SECTION*/
+
+.intro-section-holder{
+    @apply container h-[100vh] container flex flex-col py-32 px-8 justify-center items-center bg-amber-400;}
+
+
+/*.intro-section-holder{
+    @apply container flex flex-col py-32 px-8 justify-center items-center bg-amber-400 -z-40;} /// z-[1] fixed w-screen h-screen     justify-between*/
+
+    /*p-0 inset-0
+    
+    FM ****** @apply container relative h-screen z-10 flex flex-col overflow-visible justify-center items-stretch bg-blue-500; ***** Tenia escrito
+
+    EP ****** @apply container fixed pt-0 pl-0 pr-0 pb-0 z-10 flex flex-col w-screen h-screen mb-0 py-32 px-8 justify-center items-center bg-blue-500;
+    .hero-home-revised {
+        position: fixed; ok
+        left: 0; ok - inset
+        top: 0; ok - inset
+        right: 0; ok - inset
+        bottom: 0; ok - inset
+        z-index: 1; ok
+        display: flex; ok   display: -webkit-box;         display: -webkit-flex;         display: -ms-flexbox;         
+        width: 100vw; ok
+        height: 100vh; ok
+        margin-bottom: 0; AH!
+        padding: 20vh 5vw; ummmm
+        flex-direction: column; ok    -webkit-box-orient: vertical;         -webkit-box-direction: normal;         -webkit-flex-direction: column;         -ms-flex-direction: column;
+        justify-content: center; ok          -webkit-box-pack: center;         -webkit-justify-content: center;         -ms-flex-pack: center;
+        align-items: center;         -webkit-box-align: center;         -webkit-align-items: center;         -ms-flex-align: center;         
+        background-color: #000;
+    }*/
+
+
+    .intro-holder{
+        @apply relative flex flex-col p-8 justify-center items-stretch; /* z-50z-[5] overflow-hidden*/
+    }
+
+        /*container flex flex-col*/
+        /*
+        FM ****** @apply container h-full py-32 px-8 z-20 bg-cyan-300 ;  ********  relative flex flex-col overflow-hidden justify-center items-stretch
+        px y y -20
+        EP ****** @apply relative z-[5] flex overflow-hidden py-32 px-8 justify-center items-stretch bg-cyan-300;
+        .about-me {
+            position: relative; ok
+            z-index: 5; ok
+            display: flex; ok display: -webkit-box;         display: -webkit-flex;         display: -ms-flexbox;        
+            overflow: hidden; ok
+            padding: 50vh 5vw; ok        
+            justify-content: center; ok -webkit-box-pack: center;         -webkit-justify-content: center;         -ms-flex-pack: center;      
+            align-items: stretch; ok  -webkit-box-align: stretch;         -webkit-align-items: stretch;         -ms-flex-align: stretch;        
+            background-color: #000; ok
+        }
+        */
+
+        .intro-phrase{
+            @apply container flex w-full  p-8 justify-center items-center text-6xl text-center;
+        }
+
+            /*
+            FM ****** @apply container py-7 text-7xl;mt-12
+
+            EP ****** @apply container flex w-full mt-[-3em] px-[5vw] justify-start items-center text-7xl; ALTERNATIVO @apply container flex w-full mt-12 px-8 justify-start items-center text-7xl;
+            .divider-negmar {
+            display: flex; ok   display: -webkit-box;             display: -webkit-flex;            display: -ms-flexbox;            
+            width: 100%; ok
+            margin-top: -3em; ummmmm
+            padding-right: 5vw; ok
+            padding-left: 5vw; ok
+            justify-content: flex-start; ok           -webkit-box-pack: start;            -webkit-justify-content: flex-start;            -ms-flex-pack: start;            
+            align-items: center;   ok          -webkit-box-align: center;            -webkit-align-items: center;            -ms-flex-align: center;
+            }
+            */
+
+/*DIRECTIVES SECTION*/
+
+.directives-section-holder{
+    @apply container flex flex-col justify-center items-center bg-orange-700 z-30; /*z-[1] fixed w-screen h-screenpy-32 px-8*/
+}
+
+.directives-holder{
+    @apply relative flex flex-col p-8 justify-center items-stretch bg-orange-500; /*//container z-[5] z-[10] overflow-hidden py-16 px-8*/
+}
+
+    .directives-phrase{
+        @apply  flex w-fit justify-start items-center text-[4rem] ; /*container w-full animate-[wiggle_1s_ease-in-out_infinite] hover:translate-x-96 ease-linear origin-right duration-150*/
+    }
+
+    .directive-anime-right{
+        animation-duration: 20s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count:5;
+        animation-direction: normal;
+        animation-fill-mode:forwards;
+        animation-play-state:running;
+        animation-name: anime-h2-right;
+        }
+
+        @keyframes anime-h2-right {
+            0% {left: 0%; background-color: tan;}
+            100% {left: 100%; background-color: chocolate;}
+        }
+    .directive-anime-left{
+        animation-duration: 20s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count:5;
+        animation-direction: normal;
+        animation-fill-mode:forwards;
+        animation-play-state:running;
+        animation-name: anime-h2-left;
+        }
+    
+        @keyframes anime-h2-left {
+            0% {right: 0%; background-color: cadetblue;}
+            100% {right: 100%; background-color: coral;}
+        }
+    
+    /*
+    TW ******  animate-[wiggle_1s_ease-in-out_infinite]
+    FM ******  @apply animate-[anime-h2_3s_linear_0_infinite_normal_forwards_running]
+    
+    3W ******  animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+    FM ******  animation: anime-h2 3s linear 0 infinite normal forwards running;
+    
+                    <!--
+                    <div 
+                    data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a472b" class="overflow" style="will-change: transform; transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                    <h1 
+                    id="w-node-_23e59740-e5a8-dfb9-6ae7-429aca6a472c-2ffd1e9b" data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a472c" style="opacity: 1; transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="title">Human</h1></div>
+
+                        style="will-change: transform; 
+                        transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                        
+                        
+                        opacity: 1;
+                        transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                    -->
+    
+    
+    */
+
+/*SERVICES SECTION*/
+
+.services-section-holder{
+    @apply container flex flex-col p-8 bg-purple-300 z-20;
+}
+
+        .tuft{
+            @apply flex flex-col lg:flex-row p-8 gap-x-4 justify-between bg-pink-500;
+        }
+            
+            .tuft-subtitle{
+                @apply flex basis-2/5 pr-4 text-6xl;
+            }
+
+            .tuft-description{
+                @apply  flex basis-3/5 pl-4 text-4xl;
+            }
+
+
+/*PROYECTS SECTION*/
+
+
+.projects-section-holder{
+    @apply container flex flex-col p-8 bg-yellow-600 z-10; /*justify-center items-centerz-[1] fixed w-screen h-screen*/
+}
+
+/*
+    .projects-holder{
+        @apply container flex flex-col bg-yellow-300;
+    }*/
+
+
+    /*.tuft-subtitle{
+        @apply flex basis-2/5 pr-4 text-6xl;
+    }
+
+    .tuft-description{
+        @apply  flex basis-3/5 pl-4 text-4xl;
+    }*/
+        .projects-phrase{
+            @apply text-4xl; /*container */
+        }
+
+        .projects-list{
+            @apply  flex basis-3/5 pl-4; /**/
+        }
+
+        .projects-menu-nav-link{
+            @apply text-7xl; /*container */
+
+            }
+
+        /**/
+
+/* FOOTER */
+
+.foot-holder{
+    @apply container h-[80vh] w-[100vw] min-h-[50%] max-h-[100%] p-8 text-neutral-700 bg-lime-600 z-0;
+    /*height:80vh;
+    width: 100vw;
+    min-height:50%;
+    max-height:100%;*/
+}
+
+    .foot-top{@apply h-[100vh] flex justify-center items-center bg-lime-600;}
+    
+    /*.foot-top {
+        @apply container flex flex-row flex-wrap justify-between content-center bg-lime-300; */
+    
+
+      /*  .foot-top-right{
+            @apply container flex flex-col flex-grow flex-nowrap items-center;
+        }
+            /*flex-direction: column
+            flex-wrap: nowrap
+            align-content: normal
+            justify-content: normal
+            align-items: normal*/
+
+            /*.foot-top-left{
+                @apply container flex flex-col flex-grow-0 flex-nowrap place-content-center items-end text-2xl;
+            }
+            /*flex-direction: column
+            flex-wrap: nowrap
+            align-content: normal
+            justify-content: space-between
+            align-items: flex-end*/
+
+
+
+        .foot-top-tuft{
+            @apply grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6    
+        }
+
+
+        .foot-center-tuft{
+            @apply container flex flex-row py-4 bg-slate-400;
+        }
+
+
+        .foot-botton-tuft{
+            @apply justify-between bg-amber-400;/*container flex flex-row flex-wrap items-stretch text-neutral-700*/
+        }
+
+        /*flex flex-row bg-red-400*/
+                    /*.tuft{
+                    @apply flex flex-row p-8 gap-x-4 justify-between bg-pink-500;
+                }*/
+            .foot-small-line-menu-nav{
+                @apply flex flex-row pb-4 justify-between bg-red-400
+            }
+
+            .copyright-tuft{
+                @apply  flex-auto bg-teal-400
+            }
+       
+
+
+.btn{@apply text-white rounded  bg-red-500}
+
+/*experimento*/
+
+
+
+.cuadro {
+
+    @apply w-60 h-60 bg-lime-500;
+    animation-name: example;
+    animation-duration: 4s;
+
+        /*width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation-name: example;
+        animation-duration: 4s;*/ 
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+
+/*2013*/
+/*@keyframes fadeInDown {
+    0% {
+        
+       @apply opacity-0 -translate-y-1;
+        /*opacity: 0;
+        transform: translateY(-1.25em);
+    }
+    100% {
+        @apply opacity-0 translate-x-0;
+        /*opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.details-animated[open] {
+    animation-name: fadeInDown;
+    animation-duration: 0.5s;
+}*/
+/*today*/
+
+.details-animated {
+    transition: height 1s ease;
+  }
+  .details-animated:not([open]) { height: 1.25em; }
+  .details-animated[open] { height: 3.75em; }
+
+
+  /*----------------------------------------------------
+
+/* The Overlay (background) */
+.overlay {    @apply h-full w-0 fixed z-[1] left-0 top-0 bg-slate-800 overflow-x-hidden ease-in-out duration-[0.5s];}
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+   /* height: 100%;
+    width: 0;
+    position: fixed; /// Stay in place ///
+    z-index: 1; /// Sit on top ///
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /// Black fallback color ///
+    background-color: rgba(0,0,0, 0.9); /// Black w/opacity ///
+    overflow-x: hidden; /// Disable horizontal scroll ///
+    transition: 0.5s; /// 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+
+    /* Position the content inside the overlay */
+    .overlay-content {@apply relative top-1/4 w-full text-center mt-8;}
+        /*position: relative;
+        top: 25%; /// 25% from the top ///
+        width: 100%; /// 100% width ///
+        text-align: center; /// Centered text/links ///
+        margin-top: 30px; /// 30px top margin to avoid conflict with the close button on smaller screens */
+
+        /* The navigation links inside the overlay */
+
+        .overlay a {@apply block p-2 no-underline text-xl sm:text-2xl md:text-4xl text-neutral-400 ease-in-out duration-[0.3s]; }
+           /* padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;  /// Display block instead of inline  ///
+            transition: 0.3s; /// Transition effects on hover (color) */
+
+            /* When you mouse over the navigation links, change their color */
+
+        .overlay a:hover, .overlay a:focus {@apply text-neutral-400;}
+            /*color: #f1f1f1;*/
+        
+        
+        /* Position the close button (top right corner) */
+        .overlay .closebtn {@apply absolute top-4 sm:top-5 right-9  sm:right-11 text-2xl sm:text-4xl md:text-6xl;}
+            /*position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;*/
+
+             /* .overlay .closebtn {
+                    @media screen and (max-height: 450px) {
+                    .overlay a {font-size: 20px}
+                    .overlay .closebtn {
+                    font-size: 40px;
+                    top: 15px;
+                    right: 35px;
+                    }
+                
+
+ --------------------------------------------------*/
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}*/
+
+/* 22NOV2022 - 11:05
+   .intro-pack{@apply flex flex-col items-center relative gap-y-20;}
+     /*justify-center  /// z-50z-[5] overflow-hidden  ///
+    
+
+    ///----------------------------------------------------------------
+        |container flex flex-col
+    ------------------------------------------------------------------
+        FM ****** @apply container h-full py-32 px-8 z-20 bg-cyan-300 ;  ********  relative flex flex-col overflow-hidden justify-center items-stretch
+        px y y -20
+        EP ****** @apply relative z-[5] flex overflow-hidden py-32 px-8 justify-center items-stretch bg-cyan-300;
+        .about-me {
+            position: relative; ok
+            z-index: 5; ok
+            display: flex; ok display: -webkit-box;         display: -webkit-flex;         display: -ms-flexbox;        
+            overflow: hidden; ok
+            padding: 50vh 5vw; ok        
+            justify-content: center; ok -webkit-box-pack: center;         -webkit-justify-content: center;         -ms-flex-pack: center;      
+            align-items: stretch; ok  -webkit-box-align: stretch;         -webkit-align-items: stretch;         -ms-flex-align: stretch;        
+            background-color: #000; ok
+        }
+        //////////
+
+        .intro-tuft{@apply flex text-center text-4xl md:text-6xl font-extrabold;}
+
+            /*
+            FM ****** @apply container py-7 text-7xl;mt-12
+
+            EP ****** @apply container flex w-full mt-[-3em] px-[5vw] justify-start items-center text-7xl; ALTERNATIVO @apply container flex w-full mt-12 px-8 justify-start items-center text-7xl;
+            .divider-negmar {
+            display: flex; ok   display: -webkit-box;             display: -webkit-flex;            display: -ms-flexbox;            
+            width: 100%; ok
+            margin-top: -3em; ummmmm
+            padding-right: 5vw; ok
+            padding-left: 5vw; ok
+            justify-content: flex-start; ok           -webkit-box-pack: start;            -webkit-justify-content: flex-start;            -ms-flex-pack: start;            
+            align-items: center;   ok          -webkit-box-align: center;            -webkit-align-items: center;            -ms-flex-align: center;
+            }
+            */
+
+
+
+            <!--FOOTER BOTTON TUFT -->
+
+            <div class="flex flex-col"><!--class="foot-botton-pack"-->
+
+                <!--FOOTER YARN LAW MANDAROTY -->
+
+                <div class="py-2 sm:py-4"><!--class="foot-middle-tuft"-->
+
+                    <ul class="flex flex-col lg:flex-row justify-between text-xs sm:text-sm text-neutral-50"><!--class="foot-policies-line-menu-nav-yarn"-->
+                        <li><a href="https://www.w3schools.com" target="_blank" class="hover:text-neutral-400 hover:font-bold ease-in-out duration-300">Privacy Policy</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank" class="hover:text-neutral-400 hover:font-bold ease-in-out duration-300">Cookies policy</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank" class="hover:text-neutral-400 hover:font-bold ease-in-out duration-300">Privacy and Cookie Policy</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank" class="hover:text-neutral-400 hover:font-bold ease-in-out duration-300">Terms and Conditions / Legal Notice</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank" class="hover:text-neutral-400 hover:font-bold ease-in-out duration-300">Edit Personal Data</a></li>                 
+                    </ul>
+            
+                </div>
+
+                <!--FOOTER YARN OWNERSHIP -->
+        
+                <div class="flex flex-row justify-start pt-2 sm:pt-4 border-t-2 border-neutral-50"><!--class="foot-botton-tuft"-->
+
+                    <div class="flex flex-col sm:flex-row text-xs sm:text-sm text-neutral-50"><!--class="copyright-yarn"-->
+                        <div class="pr-2">©2022 Francisco Montes.</div><!--class="copyright-tress-1"-->
+                        <div class="pl-2">All Rights Reserved.</div><!--class="copyright-tress-2"-->
+                    </div>
+
+                </div>
+                
+            </div>
+            
+            <!-- HOLLOW LETTERS
+            .strokeme {
+                color: white;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                }
+                <div class="strokeme">
+                This text should have a stroke in some browsers
+                </div>
+
+                style=" text-shadow: 2px 2px red;"
+                style="text-shadow: -0.25rem 0 black, 0 0.25rem black, 0.25rem 0 black, 0 -0.25rem black;
+            
+            
+            
+            -->

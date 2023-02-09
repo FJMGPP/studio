@@ -296,7 +296,7 @@
                         | CRAFTS PACK 2 TUFT 2 YARN 1  2.2.1.  LEFT HEAD 
                         ---------------------------------------------------->                        
                         
-                        <div class="flex flex-col basis-2/5 gap-4"><!-- class="craft-yarn"-->
+                        <div class="flex flex-col basis-2/5 gap-4 "><!-- class="craft-yarn"-->
 
                             <h3 class="flex text-4xl lg:p-8 lg:text-6xl text-timberwolf-shade-400 font-serif">strategy</h3><!-- class="craft-subtitle-tress" bg-cyan-500-->
 
@@ -368,13 +368,13 @@
                         | CRAFTS PACK 3 TUFT 1 YARN 1   3.1.1 LEFT HEAD
                         ------------------------------------------------>     
 
-                        <div class=" top-0 z-10 sticky flex flex-col basis-2/5 gap-4"><!-- class="craft-yarn"-->
+                        <div class=" top-0 z-10 flex flex-col basis-2/5 gap-4"><!-- class="craft-yarn"-->
 
                             <!-----------------------------------------------
                             | CRAFTS PACK 3 TUFT 1 YARN 1 TRESS 1   3.1.1.1 
-                            ------------------------------------------------->                             
+                            ------------------------------------------------->
 
-                            <h3 class="flex text-4xl lg:p-8 lg:text-6xl text-timberwolf-shade-400 font-serif ">design</h3><!-- class="craft-subtitle-tress" -->
+                            <h3 class="flex text-4xl lg:p-8 lg:text-6xl text-timberwolf-shade-400 font-serif">design</h3><!-- class="craft-subtitle-tress" -->
 
                             <div class="p-4 text-xl lg:basis-3/5 lg:p-8 5 lg:text-2xl rounded-lg text-timberwolf-shade-400">Bla bla bla.</div><!-- class="craft-description-tress" -->
 
@@ -384,7 +384,7 @@
                         | CRAFTS PACK 3 TUFT 1 YARN 2   3.1.2 RIGHT CONTENT
                         ---------------------------------------------------->
 
-                        <div class="relative z-10 md:sticky  flex flex-col basis-3/5 gap-8 lg:gap-12 lg:p-10 rounded-lg"><!--class="flex flex-col basis-3/5 gap-8 lg:gap-12 p-10 rounded-lg"-->
+                        <div class="relative z-10 md:sticky  flex flex-col basis-3/5 gap-8 lg:gap-12 lg:p-10 rounded-lg"><!---->
 
                             <!-----------------------------------------------
                             | CRAFTS PACK 3 TUFT 1 YARN 2 TRESS 1   3.1.2.1 
@@ -400,7 +400,7 @@
 
                             <!-----------------------------------------------
                             | CRAFTS PACK 3 TUFT 1 YARN 2 TRESS 2   3.1.2.2 
-                            ------------------------------------------------->                             
+                            ------------------------------------------------->
 
                             <div class="flex flex-col rounded-lg p-6 lg:p-8 font-normal bg-timberwolf-shade-900 transition ease-in-out duration-200 hover:scale-105 focus:scale-105 hover:font-semibold focus:font-semibold hover:bg-timberwolf-700 focus:bg-timberwolf-700">
 
@@ -412,7 +412,7 @@
 
                             <!-----------------------------------------------
                             | CRAFTS PACK 3 TUFT 1 YARN 2 TRESS 1   3.1.2.3 
-                            -------------------------------------------------> 
+                            ------------------------------------------------->
 
                             <div class="flex flex-col rounded-lg p-6 lg:p-8 font-normal bg-timberwolf-shade-900 transition ease-in-out duration-200 hover:scale-105 focus:scale-105 hover:font-semibold focus:font-semibold hover:bg-timberwolf-700 focus:bg-timberwolf-700">
 
@@ -424,7 +424,7 @@
 
                             <!-----------------------------------------------
                             | CRAFTS PACK 3 TUFT 1 YARN 2 TRESS 4   3.1.2.4 
-                            ------------------------------------------------->                             
+                            ------------------------------------------------->
 
                             <div class="flex flex-col rounded-lg p-6 lg:p-8 font-normal bg-timberwolf-shade-900 transition ease-in-out duration-200 hover:scale-105 focus:scale-105 hover:font-semibold focus:font-semibold hover:bg-timberwolf-700 focus:bg-timberwolf-700">
 
@@ -436,7 +436,7 @@
 
                             <!-----------------------------------------------
                             | CRAFTS PACK 3 TUFT 1 YARN 2 TRESS 5   3.1.2.5 
-                            ------------------------------------------------->                             
+                            ------------------------------------------------->
 
                             <div class="flex flex-col rounded-lg p-6 lg:p-8 font-normal bg-timberwolf-shade-900 transition ease-in-out duration-200 hover:scale-105 focus:scale-105 hover:font-semibold focus:font-semibold hover:bg-timberwolf-700 focus:bg-timberwolf-700">
 
@@ -458,7 +458,7 @@
             | WORKS (PROJECTS) HOLDER UNIQUE
             ---------------------------------------->
 
-            <section class="container flex h-auto w-screen bg-cyan-600" id="wellcome-works"><!--class="works-section-holder"-->
+            <section class="container flex h-auto w-screen bg-winter-metallic-seaweed-300" id="wellcome-works"><!--class="works-section-holder"-->
 
                 <!---------------------------
                 | WORKS PACK 1 SECTION TITLE 
@@ -470,9 +470,9 @@
                      WORKS PACK 1 TUFT 1  1.1 
                     ---------------------------------------->
 
-                    <div class="flex flex-row justify-startS"><!--lass="section-title-tuft"-->
+                    <div class="flex flex-row justify-start"><!--lass="section-title-tuft"-->
 
-                        <h2 class="text-6xl lg:text-9xl font-bold font-serif text-cyan-200">Works</h2><!--class="section-title"-->
+                        <h2 class="text-6xl lg:text-9xl font-bold font-serif text-winter-metallic-seaweed">Works</h2><!--class="section-title"-->
 
                     </div>
 
@@ -489,8 +489,8 @@
                         <div  class="  w-auto h-auto flex flex-col flex-auto basis-2/5 object-cover object-center bg-white p-8"><!--pod-->
 
                             <picture>
-                                <source srcset="{{asset('/nunuku-logotype-white.webp')}}">
-                                <img src="{{asset('/nunuku-logotype-white.png')}}" alt="Nunuku&#39;s logotype" loading="lazy" class="object-cover object-center rounded-lg ">
+                                <source srcset="{{asset('img/nunuku-logotype-blue.webp')}}">
+                                <img src="{{asset('img/nunuku-logotype-blue.png')}}" alt="Nunuku&#39;s logotype" loading="lazy" class="object-cover object-center rounded-lg ">
                             </picture>
 
                         </div>
@@ -508,11 +508,13 @@
                             <ul class="flex flex-col gap-y-6 text-3xl  sm:text-4xl md:text-6xl"><!-- class="works-menu-nav-link" -->
 
                                 <li class="flex-auto "><!--  -->
-                                    <a href="{{asset('/nunuku')}}" target="_blank" class="text-cyan-200 hover:text-cyan-300 ease-in-out duration-300 hover:font-bold focus:font-bold">nunuku</a><!--target="#nunukucover"class="foot-top-pack-tuft-menu-link"--->
+                                    <a href="{{asset('/nunuku')}}" target="_blank" class="text-winter-metallic-seaweed hover:text-winter-metallic-seaweed-shade-700 ease-in-out duration-300 hover:font-bold focus:font-bold">nunuku</a><!--target="#nunukucover"class="foot-top-pack-tuft-menu-link"--->
+                                        <p class="text-xl lg:text-xl">Strategic planning | Project management | Logotype | Crowdfunding & Online store website | copywriting</p>
+
                                 </li>
 
                                 <li class="flex-auto"><!--  -->
-                                    <a href="{{asset('/nsic')}}"  target="_blank" class="text-cyan-200 hover:text-cyan-300 ease-in-out duration-300 hover:font-bold focus:font-bold">nsic</a><!--  -->
+                                    <a href="{{asset('/nsic')}}"  target="_blank" class="text-winter-metallic-seaweed hover:text-winter-metallic-seaweed-shade-700 ease-in-out duration-300 hover:font-bold focus:font-bold">nsic</a><!--  -->
                                 </li> 
                                 
                             </ul>
@@ -536,113 +538,83 @@
                 | ABOUT US  PACK 1 SECTION TITLE 
                 ------------------------------>                
                 
-                <div class="flex flex-col px-16 lg:px-20 gap-y-12 lg:gap-y-24"> <!-- -->
+                <div class="flex flex-col p-16 lg:p-20"> <!-- -->
 
                     <!----------------------------
                      ABOUT US  PACK 1 TUFT 1  1.1
                     ----------------------------->
 
-                    <div class="flex flex-row py-8 justify-start"><!--class="section-title-tuft"-->
+                    <div class="flex flex-rowjustify-start"> <!--class="section-title-tuft"-->
 
                         <!-----------------------------
                         | ABOUT US  PACK 1 TUFT 1 YARN 1   1.1.1
                         ------------------------------>
 
-                        <!--<h2 class="text-6xl lg:text-9xl font-bold text-timberwolf-shade-400 font-serif">Abous us</h2>-->
+                        <h2 class="text-6xl lg:text-9xl font-bold text-timberwolf-shade-400 font-serif">About us</h2>
 
                     </div>
 
                 </div>
 
                 <!--------------------
-                | ABOUT US PACK 2 
+                | ABOUT US PACK 2 CONTENT 
                 --------------------->
 
-                <div class="flex flex-col p-16 lg:p-20 gap-y-12 lg:gap-y-24">                
-                
-                    <!----------------------------
-                     ABOUT US PACK 2 TUFT 1   2.1
-                    ----------------------------->
+                <div class="flex flex-col p-16 lg:p-20 gap-y-16 lg:gap-y-20">             
+             
+                    <!-----------------------------
+                     ABOUT US PACK 2 TUFT 1   2.1 
+                    ------------------------------>
+                   
+                    <div class="flex flex-col gap-8 lg:gap-12 text-2xl lg:text-4xl text-timberwolf-shade-400">
 
-                    <div class="flex flex-col lg:flex-row gap-8 justify-items-stretch items-stretch">
-
-                        <!--------------------------------------------------
-                        | ABOUT US PACK 2 TUFT 2 YARN 1  2.2.1.  LEFT HEAD
-                        ---------------------------------------------------->                        
-                        
-                        <div class="flex flex-col basis-2/5 gap-4">
-
-                            <h3 class="flex text-4xl lg:p-8 lg:text-6xl text-timberwolf-shade-400 font-serif">strategy</h3>
-
-                            <div class="flex flex-col text-xl lg:basis-3/5 lg:p-8 lg:text-2xl rounded-lg text-timberwolf-shade-400 gap-y-8">
+                        <!----------------------------------------------
+                        | ABOUT US  PACK 2 TUFT 1 YARN 1   2.1.1
+                        ------------------------------------------------>
                                 
-                                <p class="flex">Your organization exists to serve a customer's needs.</p>
-                                <p class="flex">And do it in such a way that the customer comes back to buy from you again.</p>
-                                <p class="flex">… and again and again.</p>
-                                <p class="flex">But first, they need to find you. Then, to be convinced that you can provide what they want. Only then, they will buy from you. And if the experience was great, they may repeat.
-                                Making your customers find you and fall in love with your brand is our mission.</p>
-                                <p class="flex">To achieve it, we assist you to thoroughly design and build your organization, ensuring that it is set and aligned to do so.</p>
+                            <div class="flex w-1/2">Your organization exists to serve a customer's needs.</div>
 
-                            </div>
+                            <div class="flex w-1/2">And do it in such a way that the customer comes back to buy from you again...</div>
 
-                        </div>
+                            <div class="flex w-1/2 text-right place-self-end">... and again and again.</div>
 
-                        <!---------------------------------------------------
-                        | ABOUT US PACK 2 TUFT 2 YARN 2   2.2.2 RIGHT CONTENT
-                        ---------------------------------------------------->      
+                            <div class="flex w-1/2">But first, they need to find you.</div>
+                            
+                            <div class="flex w-1/2">Then, to be convinced that you can provide what they want.</div>
 
-                        <div class="flex flex-col basis-3/5 gap-8 lg:gap-12  lg:p-10 rounded-lg">
-
-                            <!-----------------------------------------------
-                            | ABOUT US PACK 2 TUFT 2 YARN 2 TRESS 1   2.2.2.1 
-                            -------------------------------------------------> 
-
-                            <div class="flex flex-col rounded-lg p-6 lg:p-8 bg-timberwolf-shade-700 transition ease-in-out duration-200 hover:scale-105 hover:font-medium focus:scale-105 focus:font-medium hover:bg-orange-200">
-
-                                <h4 class="text-xl text-bold sm:basis-2/5 lg:text-3xl">strategy</h4>
-
-                                <div class="p-6 lg:p-8 text-xl lg:basis-3/5 lg:text-2xl rounded-lg">Develop an actionable long-term strategy that allows you to create and seize business opportunities.</div>
-
-                            </div>
-
-                            <div  class="  w-auto h-auto flex flex-col flex-auto basis-2/5 object-cover object-center bg-white p-8"> <!--class="py-8 flex basis-1/2 grow justify-center items-center bg-blue-300"relative w-auto h-auto p-4 flex basis-auto object-cover object-center;--><!--pod-->
-
-                                <picture>
-                                    <source srcset="{{asset('img/nunuku-logotype.webp')}}">
-                                    <img src="{{asset('img/nunuku-logotype.png')}}" alt="Nunuku website opening" loading="lazy" class=" w-auto h-auto object-cover object-center rounded-lg " />
-                                </picture>
-
-                            <!-----------------------------------------------
-                            | ABOUT US PACK 2 TUFT 2 YARN 2 TRESS 2   2.2.2.2 
-                            ------------------------------------------------->                             
-
-                            <div class="flex flex-col rounded-lg p-6 lg:p-8 bg-timberwolf-shade-700 transition ease-in-out duration-200 hover:scale-105 hover:font-medium focus:scale-105 focus:font-medium hover:bg-orange-200">
-
-                                <h4 class="text-xl text-bold sm:basis-2/5 lg:text-3xl">business model</h4>
-
-                                <div class="p-6 lg:p-8 text-xl lg:basis-3/5 lg:text-2xl rounded-lg">Articulate a clear business model that simplifies your decision-making process, focusing your efforts and resources on the items critical to your business success.</div>
-
-                            </div>
-
-                            <div class="flex flex-col rounded-lg p-6 lg:p-8 bg-timberwolf-shade-700 transition ease-in-out duration-200 hover:scale-105 hover:font-medium focus:scale-105 focus:font-medium hover:bg-orange-200">
-
-                            <!-----------------------------------------------
-                            | ABOUT US PACK 2 TUFT 2 YARN 2 TRESS 3   2.2.2.3
-                            -------------------------------------------------> 
-
-                                <h4 class="text-xl text-bold sm:basis-2/5 lg:text-3xl">organization design</h4>
-
-                                <div class="p-6 lg:p-8 text-xl lg:basis-3/5 lg:text-2xl rounded-lg">Build an organization designed to brilliantly serve your customers that allows you to reach your business objectives, making the best of your resources.</div>
-
-                            </div>
-
-                        </div>
-                        
+                            <div class="flex w-1/2">Only then, they will buy from you...</div>
+                                
+                            <div class="flex w-1/2 text-right place-self-end">... and if the experience was great, they may repeat.</div>
                     </div>
 
-                </div>                
+                    <!-----------------------------
+                     ABOUT US PACK 2 TUFT 2   2.2 
+                    ------------------------------>
+                   
+                    <div class="flex flex-col gap-16 lg:gap-20">
+
+                        <!----------------------------------------------
+                        | ABOUT US  PACK 2 TUFT 2 YARN 1   2.2.1
+                        ------------------------------------------------>
+
+                        <div class="flex text-timberwolf-shade-400 text-4xl lg:text-6xl">Making your customers find you and fall in love with your brand is our mission.</div>
+
+                        <!----------------------------------------------
+                        | ABOUT US  PACK 2 TUFT 2 YARN 2   2.2.2
+                        ------------------------------------------------>
+
+                        <div class="flex flex-col text-timberwolf-shade-400 text-2xl lg:flex-row lg:basis-1/2 lg:text-4xl gap-8 lg:gap-12">
+
+                            <div >To achieve it, we assist you to thoroughly design and build your organization, brand and communications, ensuring that they are set and aligned.</div>
+
+                            <div>We are an eclectic multidisciplinary collective, including designers, architects, strategists, programers and management experts assembled to make your brand succeed.</div>
+
+                        </div>
+
+                    </div>
+
+                </div>            
                
-                
             </section>    
 
             <!---------------------------------------

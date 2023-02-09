@@ -743,8 +743,10 @@ EP
 /* SHADES /1000 #4F4C5F / 900 #474456 / 800#3F3D4C  / 700 #373543 / 600 #2F2E39  / 500 #282630 / 400#201E26  / 300 #18171D / 200 #100F13 / 100 #08080A */
 
 .bg-winter-metallic-seaweed{background: #167B90;}
+.text-winter-metallic-seaweed{color: #167B90;}
 .text-winter-metallic-seaweed-300{color: #B9D7DE;}
 .text-winter-metallic-seaweed-shade-300{color: #07252B;}
+.text-winter-metallic-seaweed-shade-700{color: #0F5665;}
 /* TINT / 1000 #167B90 / 900 #2D889B / 800 #4595A6 / 700 #5CA3B1 / 600#73B0BC  / 500 #8BBDC8 / 400 #A2CAD3 / 300 #B9D7DE / 200 #D0E5E9 / 100 #E8F2F4 */
 /* SHADES /1000 #167B90 / 900 #146F82 / 800 #126273 / 700 #0F5665 / 600 #0D4A56 / 500 #0B3E48 / 400 #09313A / 300 #07252B / 200 #04191D / 100 #020C0E */
 

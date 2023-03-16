@@ -706,7 +706,7 @@ EP
 /* TINT / 1000 #9FBCCA / 900 #A9C3CF / 800 #B2C9D5 / 700 #BCD0DA / 600 #C5D7DF / 500 #CFDEE5 / 400 #D9E4EA / 300 #E2EBEF / 200 #ECF2F4 / 100 #F5F8FA */
 /* SHADES /1000 #9FBCCA / 900 #8FA9B6 / 800 #7F96A2 / 700 #6F848D / 600 #5F7179 / 500 #505E65 / 400 #404B51 / 300#30383D  / 200 #202628 / 100 #101314 */
 
-.bg-timberwolf{background: #E3D6D1;}
+/*.bg-timberwolf{background: #E3D6D1;}
 
 .bg-timberwolf-900{background: #E6DAD6;}
 .bg-timberwolf-800{background: #E9DEDA;}
@@ -716,7 +716,7 @@ EP
 .bg-timberwolf-400{background: #F4EFED;}
 .bg-timberwolf-300{background: #F7F3F1;}
 .bg-timberwolf-200{background: #F9F7F6;}
-.bg-timberwolf-100{background: #FCFBFA;}
+.bg-timberwolf-100{background: #FCFBFA;}*/
 
 .bg-timberwolf-shade-900{background: #CCC1BC;}
 .bg-timberwolf-shade-800{background: #B6ABA7;}

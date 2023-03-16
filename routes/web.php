@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WorkController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 
 
@@ -49,7 +50,8 @@ Route::resource('works', WorkController::class)
 Route::resource('images', ImageController::class)
     ->names('images');
 
-
+Route::resource('about', AboutController::class)
+    ->names('about');
 /*
 |--------------------------------------------------------------------------
 | Routes (kike)
@@ -68,4 +70,12 @@ Route::get('/nsic', function () {
      return view('works.nsic');
 })
     ->name('works.nsic');
+
+Route::get('/about', function () {
+    return view('about');
+})
+    ->name('about');
+
+
+
 

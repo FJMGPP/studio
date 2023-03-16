@@ -15,7 +15,7 @@
         <title>studio</title><!-- VARIABLE -->
         <meta name="description" content="CHSK is a creative consultancy that works with entrepreneurs and SME leaders like you to create and take advantage of your business opportunities, based in Santiago de Compostela, Spain. We work globally, online or onsite.based in Santiago de Compostela, Spain.">
         
-        <link rel="icon" type="image/png" href="{{asset('img/fjmg-logo.png')}}">
+        <link rel="icon" type="image/png" href="{{asset('img/my-icon.png')}}">
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -38,13 +38,42 @@
 
     <body>
 
-        {{$slot}}
-
         <!---------------------------------------
-        | FOOTER
+        | BODY WRAPPER - PARALLAX 
         ---------------------------------------->
 
-        <footer class="container h-auto w-screen flex flex-col justify-between bg-winter-metallic-seaweed text-winter-metallic-seaweed-300"><!-- class="foot-holder" -->
+        <div class="container h-screen overflow-y-auto overflow-x-hidden  "><!--select-none   class="body-wrapper -->
+
+            <!---------------------------------------
+            | HEADER HOLDER UNIIQUE
+            ---------------------------------------->
+
+            <header class="container flex flex-row justify-between items-center bg-tranparent inset-0  z-50" id="wellcome-header"><!--sticky class="header-holder--->
+                
+                <!--------------------------
+                | HEADER PACK 1 LOGO
+                --------------------------->
+
+                <div class="absolute mt-20 ml-4 lg:mt-20 lg:ml-8 w-auto h-auto flex basis-auto object-cover object-center"><!--lg:p-6 class="logo-holder--->               
+        
+                    <a href="{{asset('/')}}" target="_blank" class="ease-in-out duration-300 hover:scale-110 focus:scale-110">
+                        <img src="{{asset('img/fjmg-logotype.png')}}" alt="fjmg logotype" loading="lazy" class="w-10 h-auto"/><!-- class="logo"--->     
+                    </a>
+                    
+                </div>
+
+              <!--#700B23 #BDB539 #BC2649 #1390BD #115770-->
+
+            </header>
+
+            {{$slot}}
+
+            <!---------------------------------------
+            | FOOTER HOLDER UNIQUE
+            ---------------------------------------->
+
+            <footer class="container h-auto w-screen flex flex-col justify-between bg-winter-metallic-seaweed text-winter-metallic-seaweed-300" id="wellcome-foot"><!-- class="foot-holder" -->
+
                 <!---------------------------------------
                 | FOOTER PACK 
                 ---------------------------------------->
@@ -60,7 +89,6 @@
                         <!---------------------------------------
                         | FOOTER PACK 1 - TUFT 1 (TOP) - YARN  1.1
                         ---------------------------------------->
-
                         
                         <div class="basis-1/2 font-semibold text-4xl  sm:text-5xl md:text-7xl text-winter-metallic-seaweed-300 font-serif">Do you have a project or idea?</div><!-- class="foot-top-pack-tuft-yarn-1" -->
 
@@ -70,7 +98,7 @@
 
                         <div class="flex flex-col gap-y-8">
 
-                            <div class="basis-1/2 pt-4 text-3xl sm:text-4xl md:text-6xl text-winter-metallic-seaweed-300">Let's create wonders together</div><!-- class="foot-top-pack-tuft-yarn-2 --> 
+                            <div class="basis-1/2 pt-4 text-3xl sm:text-4xl md:text-6xl text-yellow-500">Let's create wonders together</div><!-- class="foot-top-pack-tuft-yarn-2 --> 
 
                             <!------------------------------------------------------------
                             | FOOTER PACK 1 - TUFT 1 (TOP) - YARN 1.3 (CALL+SOCIAL)
@@ -82,11 +110,11 @@
                                 | FOOTER PACK 1 - TUFT 1 (TOP) - YARN 1.3 (CALL) - TRESS 1.3.1 CALL
                                 ----------------------------------------------------------------------->
 
-                                <div class="flex flex-col text-winter-metallic-seaweed-300">
+                                <div class="flex flex-col text-yellow-500">
 
                                     <div class="text-xl lg:text-2xl">Send me an email</div><!-- class="act-call" -->
 
-                                    <a href="mailto:fjmgpp@gmail.com" class="inline-block text-2xl lg:text-4xl hover:text-winter-metallic-seaweed-300 hover:font-bold ease-in-out duration-300">fjmgpp@gmail.com</a><!-- class="emailme" -->
+                                    <a href="mailto:fjmgpp@gmail.com" class="inline-block text-2xl lg:text-4xl hover:text-yellow-400 hover:font-bold ease-in-out duration-300">fjmgpp@gmail.com</a><!-- class="emailme" -->
                             
                                 </div>
 
@@ -96,7 +124,7 @@
 
                                 <div class="flex flex-col">
 
-                                    <div class="text-xl lg:text-2xl pb-4 text-winter-metallic-seaweed-300">Follow me</div><!-- class="act-call" -->
+                                    <div class="text-xl lg:text-2xl pb-4 text-yellow-500">Follow me</div><!-- class="act-call" -->
 
                                 <!--------------------------------------------------------------------------------------
                                 | FOOTER PACK 1 - TUFT 1 (TOP) - YARN 1.3 (CALL) - TRESS 1.3.2 SOCIAL - SOCIAL ICONS
@@ -130,39 +158,39 @@
                     | FOOTER PACK 1 - TUFT 2 (MIDDLE)
                     ---------------------------------------->                    
 
-                    <div class="flex flex-row pb-8 justify-start md:justify-endend "><!-- class="foot-top-pack-tuft-quest" -->
+                    <div class="flex flex-col sm:flex-row py-4 justify-evenly"><!--justify-start md:justify-end class="foot-top-pack-tuft-quest" -->
 
 
                         <!------------------------------------------------------------
                         | FOOTER PACK 1 - TUFT 2 (MIDDLE) - YARN 2.1 (NAV)
                         -------------------------------------------------------------->   
 
-                        <nav class=" h-full w-full flex flex-col text-2xl sm:text-5xl"><!-- class="foot-top-pack-tuft-menu" -->
+                        <nav class=" flex flex-col sm:flex-row"><!--h-full w-full flex-col text-2xl sm:text-5xl class="foot-top-pack-tuft-menu" -->
 
                             <!---------------------------------------------------------------------
                             | FOOTER PACK 1 - TUFT 2 (MIDDLE) - YARN 2.1 (NAV) - TRESS 2.1.1. MENU
                             ----------------------------------------------------------------------> 
 
-                            <ul class="flex flex-col gap-y-2 text-2xl sm:text-4xl md:text-5xl items-start md:items-end"><!-- class="foot-top-pack-tuft-menu-yarn" -->
+                            <ul class="flex-col sm:flex-row flex gap-x-4 text-2xl sm:text-3xl md:text-4xl items-start md:items-end"><!--flex-col class="foot-top-pack-tuft-menu-yarn" -->
     
                                 <li>
-                                    <a href="https://www.w3schools.com" target="_blank" class=" text-winter-metallic-seaweed-300 hover:#07252B focus:#07252B hover:font-bold ease-in-out duration-300">home</a>  <!--class="foot-top-pack-tuft-menu-link"-->
+                                    <a href="https://www.w3schools.com" target="_blank" class=" text-winter-metallic-seaweed-300 hover:text-winter-metallic-seaweed-shade-300 hover:font-bold ease-in-out duration-300">home</a>  <!--class="foot-top-pack-tuft-menu-link"-->
                                 </li>
                                 
                                 <li>
-                                    <a href="https://www.w3schools.com" target="_blank" class="text-winter-metallic-seaweed-300 hover:text-winter-metallic-seaweed-shade-300 focus:text-winter-metallic-seaweed-shade-300 hover:font-bold ease-in-out duration-300">craft</a>
-                                </li> <!--class="foot-top-pack-tuft-menu-link"-->
+                                    <a href="https://www.w3schools.com" target="_blank" class="text-winter-metallic-seaweed-300 hover:text-teal-400  hover:font-bold ease-in-out duration-300">craft</a>
+                                </li>
     
                                 <li>    
-                                    <a href="https://www.w3schools.com" target="_blank" class=" text-winter-metallic-seaweed-300 hover:text-winter-metallic-seaweed-shade-300 focus:text-winter-metallic-seaweed-shade-300 hover:font-bold ease-in-out duration-300">work</a>
-                                </li><!--class="foot-top-pack-tuft-menu-link"-->
+                                    <a href="https://www.w3schools.com" target="_blank" class="text-winter-metallic-seaweed-300 hover:text-teal-400  hover:font-bold ease-in-out duration-300">work</a>
+                                </li>
     
                                 <li>
-                                    <a href="https://www.w3schools.com" target="_blank" class=" text-winter-metallic-seaweed-300 hover:text-winter-metallic-seaweed-shade-300 focus:text-winter-metallic-seaweed-shade-300 hover:font-bold ease-in-out duration-300">about</a>
-                                </li>  <!--class="foot-top-pack-tuft-menu-link"-->  
+                                    <a href="{{asset('/about')}}" target="_blank"  class="text-winter-metallic-seaweed-300 hover:text-teal-400  hover:font-bold ease-in-out duration-300">about</a>
+                                </li>
                                 
                                 <li>
-                                    <a href="https://www.w3schools.com" target="_blank" class=" text-winter-metallic-seaweed-300 hover:text-winter-metallic-seaweed-shade-300 focus:text-winter-metallic-seaweed-shade-300 hover:font-bold ease-in-out duration-300">contact</a> <!--class="foot-top-pack-tuft-menu-link"-->
+                                    <a href="https://www.w3schools.com" target="_blank" class="text-winter-metallic-seaweed-300 hover:text-teal-400  hover:font-bold ease-in-out duration-300">contact</a>
                                 </li>
     
                             </ul>
@@ -171,7 +199,7 @@
 
                     </div>
 
-                     <!---------------------------------------
+                    <!---------------------------------------
                     | FOOTER PACK 1 - TUFT 3 (BOTTON)
                     ---------------------------------------->                   
 
@@ -212,8 +240,9 @@
 
                 </div>
 
-        </footer>
+            </footer>
 
+        </div>
         
         @livewireStyles
 

@@ -56,7 +56,7 @@
 
                 <div class="absolute mt-20 ml-4 lg:mt-20 lg:ml-8 w-auto h-auto flex basis-auto object-cover object-center"><!--lg:p-6 class="logo-holder--->               
         
-                    <a href="{{asset('/')}}" target="_blank" class="ease-in-out duration-300 hover:scale-110 focus:scale-110">
+                    <a href="{{route('welcome')}}" class="ease-in-out duration-300 hover:scale-110 focus:scale-110">
                         <img src="{{asset('img/fjmg-logotype.png')}}" alt="fjmg logotype" loading="lazy" class="w-10 h-auto"/><!-- class="logo"--->     
                     </a>
                     

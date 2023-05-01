@@ -56,7 +56,7 @@
 
                 <div class="absolute mt-20 ml-4 lg:mt-20 lg:ml-8 w-auto h-auto flex basis-auto object-cover object-center">
         
-                    <a href="{{asset('welcome')}}" target="_self" class="ease-in-out duration-300 hover:scale-110 focus:scale-110">
+                    <a href="{{route('welcome')}}" class="ease-in-out duration-300 hover:scale-110 focus:scale-110">
                         <img src="{{asset('img/fjmg-logotype.png')}}" alt="fjmg logotype" loading="lazy" class="w-10 h-auto"/>    
                     </a>
 
@@ -522,7 +522,7 @@
 
                                 <li class="flex-auto border-solid border-b-4 pb-8 border-winter-metallic-seaweed "><!--  -->
                                     
-                                    <a href="{{asset('/nunuku')}}" target="_blank" class="text-winter-metallic-seaweed hover:text-winter-metallic-seaweed-shade-700 ease-in-out duration-300 hover:font-bold focus:font-bold">nunuku</a>
+                                    <a href="{{route('works.nunuku')}}" class="text-winter-metallic-seaweed hover:text-winter-metallic-seaweed-shade-700 ease-in-out duration-300 hover:font-bold focus:font-bold">nunuku</a>
 
                                     <p class="text-xl lg:text-xl text-winter-metallic-seaweed ">strategic planning | project management | logotype | crowdfunding & online store website | copywriting</p>
 
@@ -530,7 +530,7 @@
 
                                 <li class="flex-auto border-solid border-b-4 pb-8 border-winter-metallic-seaweed ">
                                     
-                                    <a href="{{asset('/nsic')}}"  target="_blank" class="text-winter-metallic-seaweed hover:text-winter-metallic-seaweed-shade-700 ease-in-out duration-300 hover:font-bold focus:font-bold">nsic</a>
+                                    <a href="{{route('works.nsic')}}" class="text-winter-metallic-seaweed hover:text-winter-metallic-seaweed-shade-700 ease-in-out duration-300 hover:font-bold focus:font-bold">nsic</a>
                                     
                                     <p class="text-xl lg:text-xl text-winter-metallic-seaweed ">strategic planning | project management | logotype | website | copywriting</p>
 
